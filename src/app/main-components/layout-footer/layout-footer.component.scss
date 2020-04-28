@@ -1,0 +1,16 @@
+@import '../../../styles/styles.scss';
+
+@mixin layout-colors {
+  color: rgb(255, 255, 255);
+  background-color: primary_color();
+}
+
+$footer-padding: 15px;
+
+.footer {
+  @include layout-colors;
+  font-size: 16px;
+  padding-left: $footer-padding;
+  padding-top: $footer-padding;
+  padding-bottom: $footer-padding;
+}
