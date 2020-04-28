@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { DriverHomeModule } from './modules/driver-home/driver-home.module';
+import { UserHomeModule } from './modules/user-home/user-home.module';
 import { LoginModule } from './modules/login/login.module';
 import {AvailableServicesModule} from "./modules/available-services/available-services.module";
 import {MapModule} from "./modules/map/map.module";
@@ -15,6 +17,8 @@ import { LayoutFooterComponent } from './main-components/layout-footer/layout-fo
   ],
   imports: [
     BrowserModule,
+    DriverHomeModule,
+    UserHomeModule,
     LoginModule,
     AvailableServicesModule,
     MapModule,
