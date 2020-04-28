@@ -1,0 +1,49 @@
+@import '../../../../../styles/styles.scss';
+
+@mixin image-scale($size, $pad1, $pad2){
+    .image-size{
+        width: $size;
+    }
+
+    .row1-padding{
+        padding-top: $pad1;
+    }
+
+    .row2-padding{
+        padding-top: $pad2;
+        padding-bottom: $pad2 * 4;
+    }
+}
+
+.center-element{
+    margin: auto;
+}
+
+.center-row{
+    @extend .center-element;
+}
+
+body{
+    background-color: primary_color();
+}
+
+.btn {
+    background-color: secondary_color();
+}
+
+/*Desktop*/
+@media (min-width: $desktop-width){
+    @include image-scale(200px, 80px, 20px);
+}
+/*Laptop*/
+@media (min-width: $laptop-width) and (max-width: $desktop-width - 1px){
+    @include image-scale(200px, 80px, 20px);
+}
+/*Tablet*/
+@media (min-width: $tablet-width) and (max-width: $laptop-width - 1px){
+    @include image-scale(300px, 80px, 10px);
+}
+/*Mobile*/
+@media (max-width: $tablet-width - 1px){
+    @include image-scale(300px , 80px, 10px);
+}
