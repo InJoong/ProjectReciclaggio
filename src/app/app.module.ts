@@ -3,18 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LoginModule } from './modules/login/login.module';
+import {AvailableServicesModule} from "./modules/available-services/available-services.module";
+import {MapModule} from "./modules/map/map.module";
+import {ServiceDetailModule} from "./modules/service-detail/service-detail.module";
 import { LayoutFooterComponent } from './main-components/layout-footer/layout-footer.component';
-import { LayoutHeaderComponent } from './main-components/layout-header/layout-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutFooterComponent,
-    LayoutHeaderComponent
   ],
   imports: [
     BrowserModule,
-    LoginModule
+    LoginModule,
+    AvailableServicesModule,
+    MapModule,
+    ServiceDetailModule
   ],
   providers: [],
   bootstrap: [AppComponent]
