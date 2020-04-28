@@ -3,3 +3,8 @@
 
 @import 'variables';
 @import 'parcial';
+@import "function";
+
+body{
+  background-color: primary_color();
+}

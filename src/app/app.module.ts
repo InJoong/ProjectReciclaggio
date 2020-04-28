@@ -6,10 +6,12 @@ import { LoginModule } from './modules/login/login.module';
 import {AvailableServicesModule} from "./modules/available-services/available-services.module";
 import {MapModule} from "./modules/map/map.module";
 import {ServiceDetailModule} from "./modules/service-detail/service-detail.module";
+import { LayoutFooterComponent } from './main-components/layout-footer/layout-footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LayoutFooterComponent,
   ],
   imports: [
     BrowserModule,

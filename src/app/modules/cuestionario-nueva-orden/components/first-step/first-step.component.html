@@ -1,0 +1,72 @@
+<div class="nueva-orden-container">
+  <div class="row">
+    <div class="nueva-orden-titulo">
+      <h4>¿Que quieres vender?</h4>
+      <h5>Paso 1 de 4</h5>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 15px;">
+    <div class="form-body">
+      <form action="./nueva_orden_2.html" method="get">
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <select class="form-control" id="categoria" required>
+            <option label="categoria"></option>
+            <option>Electronicos</option>
+            <option>Muebles</option>
+            <option>Papel</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subcategoria">Subcategoria</label>
+          <select class="form-control" id="subcategoria" required>
+            <option label="subcategoria"></option>
+            <option>Revistas</option>
+            <option>Libros</option>
+            <option>Periodicos</option>
+          </select>
+        </div>
+
+        <label for="peso">Peso</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="peso" placeholder="1" pattern="[0-9]*[.]{0,1}[0-9]*">
+          <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon3">kg</span>
+          </div>
+        </div>
+
+        <h6>Dimensiones</h6>
+
+        <label for="alto">Alto</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="alto" placeholder="10" pattern="[0-9]*[.]{0,1}[0-9]*">
+          <div class="input-group-append">
+            <span class="input-group-text">cm</span>
+          </div>
+        </div>
+
+        <label for="ancho">Ancho</label>
+        <div class="input-group">
+
+          <input type="text" class="form-control" id="ancho" placeholder="10" pattern="[0-9]*[.]{0,1}[0-9]*">
+          <div class="input-group-append">
+            <span class="input-group-text">cm</span>
+          </div>
+        </div>
+
+
+        <label for="alto">Largo</label>
+        <div class="input-group">
+
+          <input type="text" class="form-control" id="largo" placeholder="10" pattern="[0-9]*[.]{0,1}[0-9]*">
+          <div class="input-group-append">
+            <span class="input-group-text">cm</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-siguiente-paso">Siguiente paso</button>
+      </form>
+
+    </div>
+  </div>
+</div>
