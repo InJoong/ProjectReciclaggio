@@ -1,0 +1,9 @@
+@import './variables';
+
+@function primary_color() {
+  @return rgb($primary_color_red, $primary_color_green, $primary_color_blue);
+}
+
+@function secondary_color() {
+  @return rgb(255 - $primary_color_red, 255 - $primary_color_green, 255 - $primary_color_blue);
+}

@@ -1,0 +1,33 @@
+@import '../../../../../styles/styles.scss';
+
+.nueva-orden-container {
+  @extend .container;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.nueva-orden-titulo {
+  @extend .col;
+  @extend .offset-lg-3;
+  h4 {
+    margin-bottom: 15px;
+  }
+}
+
+.btn-siguiente-paso {
+  @extend .btn;
+  margin-top: 15px;
+  background-color: primary_color();
+  color: secondary_color();
+}
+
+@mixin centered_margins($width) {
+  width: $width;
+  margin-left: (100% - $width) / 2;
+}
+
+.form-body {
+  @extend .col-lg-8;
+  @extend .offset-lg-3;
+}
+
