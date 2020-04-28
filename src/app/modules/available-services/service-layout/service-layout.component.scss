@@ -1,0 +1,30 @@
+@mixin layout-colors {
+  color: rgb(255, 255, 255);
+  background-color:rgb(81, 167, 81);
+}
+
+#main {
+  margin-top: 80px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn {
+  @include layout-colors
+}
+
+.card {
+  margin-top: 8px;
+}
+
+.circle {
+
+  @include layout-colors;
+  border-radius: 50%;
+
+  height: 60px;
+}
+
+.last-container {
+  margin-bottom: 60px;
+}
