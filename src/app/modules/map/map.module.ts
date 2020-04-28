@@ -6,6 +6,9 @@ import { RouteMapComponent } from './route-map/route-map.component';
 
 @NgModule({
   declarations: [RouteMapComponent],
+  exports: [
+    RouteMapComponent
+  ],
   imports: [
     CommonModule
   ]
