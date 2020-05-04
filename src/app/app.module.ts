@@ -10,6 +10,15 @@ import { LayoutFooterComponent } from './main-components/layout-footer/layout-fo
 import { PageNotFoundComponent } from './main-components/page-not-found/page-not-found.component';
 import {LayoutHeaderComponent} from './main-components/layout-header/layout-header.component';
 
+import { registerLocaleData } from '@angular/common';
+import localeMx from '@angular/common/locales/es-MX';
+import localeUs from '@angular/common/locales/en';
+import localeKo from '@angular/common/locales/ko';
+
+registerLocaleData(localeMx, 'es');
+registerLocaleData(localeUs, 'en');
+registerLocaleData(localeKo, 'ko');
+
 @NgModule({
   declarations: [
     AppComponent,
