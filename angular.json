@@ -33,6 +33,24 @@
             "scripts": []
           },
           "configurations": {
+            "es": {
+              "aot": true,
+              "i18nFile": "src/locale/messages.es.xlf",
+              "i18nLocale": "xlf",
+              "i18nMissingTranslation": "error"
+            },
+            "en": {
+              "aot": false,
+              "i18nFile": "src/locale/messages.en.xlf",
+              "i18nLocale": "xlf",
+              "i18nMissingTranslation": "error"
+            },
+            "ko": {
+              "aot": false,
+              "i18nFile": "src/locale/messages.ko.xlf",
+              "i18nLocale": "xlf",
+              "i18nMissingTranslation": "error"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -69,6 +87,15 @@
             "browserTarget": "project-angular:build"
           },
           "configurations": {
+            "es": {
+              "browserTarget": "project-angular:build:es"
+            },
+            "en": {
+              "browserTarget": "project-angular:build:en"
+            },
+            "ko": {
+              "browserTarget": "project-angular:build:ko"
+            },
             "production": {
               "browserTarget": "project-angular:build:production"
             }
