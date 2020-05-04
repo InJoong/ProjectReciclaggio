@@ -5,6 +5,10 @@
 @import 'parcial';
 @import "function";
 
-body{
-  background-color: primary_color();
+.header-login {
+  display: none !important;
 }
+.body-login{
+  background-color: primary_color() !important;
+}
+

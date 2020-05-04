@@ -1,4 +1,4 @@
-@import '../../../../../styles/styles.scss';
+@import '../../../../../styles/styles';
 
 .nueva-orden-container {
   @extend .container;
@@ -31,3 +31,19 @@
   @extend .offset-lg-3;
 }
 
+.map-img {
+  @media (min-width: $desktop-width){
+    @include centered_margins(75%);
+  }
+  @media (min-width: $laptop-width) and (max-width: $desktop-width - 1px){
+    @include centered_margins(85%);
+  }
+  @media (min-width: $tablet-width) and (max-width: $laptop-width - 1px){
+    @include centered_margins(95%);
+  }
+  @media (max-width: $tablet-width - 1px){
+    @include centered_margins(100%);
+  }
+
+  margin-bottom: 15px;
+}
