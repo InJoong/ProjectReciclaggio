@@ -4,8 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { LoginModule } from './modules/login/login.module';
-import { AvailableServicesModule} from "./modules/available-services/available-services.module";
-import { ServiceDetailModule } from "./modules/service-detail/service-detail.module";
+import { AvailableServicesModule} from './modules/available-services/available-services.module';
+import { ServiceDetailModule } from './modules/service-detail/service-detail.module';
 import { LayoutFooterComponent } from './main-components/layout-footer/layout-footer.component';
 import { PageNotFoundComponent } from './main-components/page-not-found/page-not-found.component';
 

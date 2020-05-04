@@ -1,4 +1,4 @@
-@import '../../../../../styles/styles.scss';
+@import '../../../../../styles/styles';
 
 .nueva-orden-container {
   @extend .container;
@@ -29,8 +29,4 @@
 .form-body {
   @extend .col-lg-8;
   @extend .offset-lg-3;
-}
-
-.stripe-api {
-  height: 300px;
 }
