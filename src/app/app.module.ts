@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { UserHomeModule } from './modules/user-home/user-home.module';
 import { LoginModule } from './modules/login/login.module';
 import { AvailableServicesModule} from "./modules/available-services/available-services.module";
 import { ServiceDetailModule } from "./modules/service-detail/service-detail.module";
@@ -18,7 +17,6 @@ import { PageNotFoundComponent } from './main-components/page-not-found/page-not
   ],
   imports: [
     BrowserModule,
-    UserHomeModule,
     LoginModule,
     AvailableServicesModule,
     ServiceDetailModule,
