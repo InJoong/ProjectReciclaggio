@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { DriverHomeModule } from './modules/driver-home/driver-home.module';
-import { UserHomeModule } from './modules/user-home/user-home.module';
 import { LoginModule } from './modules/login/login.module';
 import {AvailableServicesModule} from "./modules/available-services/available-services.module";
 import {MapModule} from "./modules/map/map.module";
@@ -20,8 +18,6 @@ import { PageNotFoundComponent } from './main-components/page-not-found/page-not
   ],
   imports: [
     BrowserModule,
-    DriverHomeModule,
-    UserHomeModule,
     LoginModule,
     AvailableServicesModule,
     MapModule,
