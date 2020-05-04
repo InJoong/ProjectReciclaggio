@@ -8,10 +8,12 @@ import { AvailableServicesModule} from './modules/available-services/available-s
 import { ServiceDetailModule } from './modules/service-detail/service-detail.module';
 import { LayoutFooterComponent } from './main-components/layout-footer/layout-footer.component';
 import { PageNotFoundComponent } from './main-components/page-not-found/page-not-found.component';
+import {LayoutHeaderComponent} from './main-components/layout-header/layout-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LayoutHeaderComponent,
     LayoutFooterComponent,
     PageNotFoundComponent,
   ],
