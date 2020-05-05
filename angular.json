@@ -36,19 +36,22 @@
             "es": {
               "aot": true,
               "i18nFile": "src/locale/messages.es.xlf",
-              "i18nLocale": "xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
               "i18nMissingTranslation": "error"
             },
             "en": {
-              "aot": false,
+              "aot": true,
               "i18nFile": "src/locale/messages.en.xlf",
-              "i18nLocale": "xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
               "i18nMissingTranslation": "error"
             },
             "ko": {
-              "aot": false,
+              "aot": true,
               "i18nFile": "src/locale/messages.ko.xlf",
-              "i18nLocale": "xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "ko",
               "i18nMissingTranslation": "error"
             },
             "production": {
