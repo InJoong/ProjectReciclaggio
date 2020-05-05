@@ -30,6 +30,163 @@
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="9aac68b089b9b8e4dc13cf2317b2b30e9d1de508" datatype="html">
+        <source>Servicio 1267430</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/driver/components/driver-card/driver-card.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6987ba36fa36fc79b74b818da9e024a83ec61a24" datatype="html">
+        <source>Solicitado por: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/driver/components/driver-card/driver-card.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/service-detail/service-detail.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e4a5982b86194a7c04d3e65e4129bd9b59a8f715" datatype="html">
+        <source>Telefono:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/driver/components/driver-card/driver-card.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/service-detail/service-detail.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="149e351f5ff5969d652b27dcdc147b46941cfb7d" datatype="html">
+        <source>Cita:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/driver/components/driver-card/driver-card.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8f13de209bc30283450444c88c049eb1dc92d479" datatype="html">
+        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Descripcion<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/driver/components/driver-card/driver-card.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dfca4dae20ca0204721ddba763adac2f1c18e739" datatype="html">
+        <source>Necesito recoger cuatro muebles pasados para reciclaje de los mismos. Precio a negociar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/driver/components/driver-card/driver-card.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="57c5febcb4dad538e04fbc4446484d37674b2815" datatype="html">
+        <source>Completar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/driver/components/driver-card/driver-card.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e8d22cdef9f5780e31395340125d873f9df518c3" datatype="html">
+        <source>Cancelar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/driver/components/driver-card/driver-card.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="146009ad49116001afa2602bebdb45de077059e0" datatype="html">
+        <source>Ruta del dia</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/driver/components/route-map/route-map.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="02e4a1ac9bde8031ebec0f3a5781aa2b46f6f216" datatype="html">
+        <source>Servicios Disponibles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/service-layout/service-layout.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="08a41269f7e9b6ba80e7439adf5a578288e30158" datatype="html">
+        <source>Ubicaciones</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/filter-card/filter-card.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="62c37679b7383f595452fce91cb2a0558d8657fe" datatype="html">
+        <source>Todas las ubicaciones</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/filter-card/filter-card.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9acc4eba8ab372d7e8f68750b536455a0845f661" datatype="html">
+        <source>Todos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/filter-card/filter-card.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="299451d26354c16eb7ee18e504822b7c4d8a6fc6" datatype="html">
+        <source>Electrodomesticos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/filter-card/filter-card.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="de14b4b3777b32160249078e0bea7d0c20a0033b" datatype="html">
+        <source>Muebles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/filter-card/filter-card.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/user/components/first-step/first-step.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="081361478b3209c17f60874e62627048db45da53" datatype="html">
+        <source>Cascajo y escombros</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/filter-card/filter-card.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="35ad82bbaa7e8b24c1bdf03f3260422c5910a1fb" datatype="html">
+        <source>Aceptar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/service-card/service-card.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/service-detail/service-detail.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e94b1505b42c918939e197bb930eb1423907ba62" datatype="html">
+        <source>Descripcion</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/service-detail/service-detail.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="43697002adb1a4367e5a5b9273e0b3ce65be1307" datatype="html">
+        <source>Ncesito recoger cuatro muebles pesados para reciclaje
+                de los mismos. Precio a negociar. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/service-detail/service-detail.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ed48a7cf387caeb62d47a01845588e4a5a49168b" datatype="html">
+        <source>Volver</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/available-services/components/service-detail/service-detail.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="c080a76548a18af719543bdc7fc57ae782256acc" datatype="html">
         <source>Citas</source>
         <context-group purpose="location">
@@ -75,13 +232,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/user/components/first-step/first-step.component.html</context>
           <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="de14b4b3777b32160249078e0bea7d0c20a0033b" datatype="html">
-        <source>Muebles</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/modules/user/components/first-step/first-step.component.html</context>
-          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9d9f1466bc84291cd7498c5f1a4c858fc76af019" datatype="html">
