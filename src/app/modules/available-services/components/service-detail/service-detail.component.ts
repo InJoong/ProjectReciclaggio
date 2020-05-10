@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {APPOINTMENTS} from "../../../../data/appointments";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-service-detail',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiceDetailComponent implements OnInit {
 
-  constructor() { }
+  currentId = this.route.snapshot.params['id'];
+  appointment = APPOINTMENTS.filter(appointment => appointment.id == this.currentId)[0];
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
   }
-
 }

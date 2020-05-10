@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-driver-card',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./driver-card.component.scss']
 })
 export class DriverCardComponent implements OnInit {
+
+  @Input() appointment;
 
   constructor() { }
 
