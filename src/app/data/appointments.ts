@@ -70,5 +70,41 @@ export const APPOINTMENTS = [
     zone: "Del Valle",
     address: "Calle de Mari, #4342",
     description: "Necesito recoger basura organica de abejas."
+  },
+  {
+    id: 100007,
+    client: "Paulo Suarez",
+    driverId: null,
+    type: "Electrodomesticos",
+    phone: "+52 (55) 2321 8854",
+    date: "12/04/2020",
+    hour: "14:00",
+    zone: "Del Valle",
+    address: "Calle Internacionales Buitres, #2313",
+    description: "Necesito recoger un refreigerador descompuesto para reciclaje."
+  },
+  {
+    id: 10008,
+    client: "In Joong Kim",
+    driverId: null,
+    type: "Electrodomesticos",
+    phone: "+52 (55) 6969 6969",
+    date: "15/04/2020",
+    hour: "15:00",
+    zone: "Tlalpan",
+    address: "Calle de los Pastores, #6969",
+    description: "Necesito reciclar mi ASUS porque murio."
+  },
+  {
+    id: 10009,
+    client: "Humberto Hernandez",
+    driverId: null,
+    type: "Muebles",
+    phone: "+52 (55) 2212 4353",
+    date: "22/04/2020",
+    hour: "17:30",
+    zone: "Del Valle",
+    address: "Calle de Villacoapa, #324",
+    description: "Necesito reciclar una base de una cama de madera y tablaroca."
   }
 ]
