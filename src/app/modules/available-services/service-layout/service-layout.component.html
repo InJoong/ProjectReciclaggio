@@ -14,17 +14,8 @@
 
 <div class="container last-container">
   <div class="row">
-    <div class="col-xs-12 col-md-4">
-      <app-service-card></app-service-card>
-    </div>
-    <div class="col-xs-12 col-md-4">
-      <app-service-card></app-service-card>
-    </div>
-    <div class="col-xs-12 col-md-4">
-      <app-service-card></app-service-card>
-    </div>
-    <div class="col-xs-12 col-md-4">
-      <app-service-card></app-service-card>
-    </div>
+      <div class="col-xs-12 col-md-4" *ngFor="let appointment of appointments">
+        <app-service-card [appointment]="appointment" ></app-service-card>
+      </div>
   </div>
 </div>

@@ -1,9 +1,11 @@
   <div class="card">
     <div class="card-header">
-      <a routerLink="detail" class="btn" i18n>Aceptar</a>
+      <a [routerLink]="['detail', appointment.id]" class="btn" i18n>Detalles</a>
+      <span> Tipo de servicio: <b> {{appointment.type}} </b></span>
     </div>
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">Reciclaje de sofas Lomas Verdes 3435545</p>
+      <h5 class="card-title">{{appointment.client}}</h5>
+      <p class="card-text">{{appointment.zone}}, {{appointment.address}}</p>
+      <p class="card-text">{{appointment.date}}, {{appointment.hour}}</p>
     </div>
   </div>
