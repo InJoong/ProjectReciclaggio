@@ -11,6 +11,7 @@ Semestre Febrero-Junio 2020.
 - Node >= 14.0.0
 - NPM >= 6.14.4
 - Angular
+
 #Como ejecutar
 Para poder ejecutar el proyecto se debe de correr `npm install` para instalar las
 dependencias requeridas. Después de esto se puede usar `npm start` para poder
