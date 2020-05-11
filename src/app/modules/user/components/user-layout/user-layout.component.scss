@@ -43,6 +43,13 @@
     display: block;
 }
 
+.container{
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+
+
 /*Desktop*/
 @media (min-width: $desktop-width){
     @include row-padding(80px, 30px);

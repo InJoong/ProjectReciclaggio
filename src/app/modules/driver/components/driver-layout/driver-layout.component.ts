@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { APPOINTMENTS } from "../../../data/appointments";
+import { APPOINTMENTS } from "../../../../data/appointments";
 
 @Component({
   selector: 'app-driver-layout',
