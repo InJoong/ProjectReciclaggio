@@ -1,5 +1,6 @@
 #Reciclaggio
 ![Logo de Reciclaggio](./src/assets/img/HarambeChidori.png)
+
 Plataforma diseñada para permitir que usuarios que deseen reciclar diferentes tipos de
 productos puedan contactar con proveedores de este tipo de servicios.
 
