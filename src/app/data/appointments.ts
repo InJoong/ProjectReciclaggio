@@ -46,10 +46,7 @@ export const APPOINTMENTS = [
     zone: "Tlalpan",
     address: "Calle de Don Lauro, #4342",
     description: "Necesito recoger cuatro muebles pasados para reciclaje de los mismos. Precio a negociar."
-  }
-]
-
-export const APPOINTMENTUSER = [
+  },
   {
     id: 100005,
     client: "Don Lauro",

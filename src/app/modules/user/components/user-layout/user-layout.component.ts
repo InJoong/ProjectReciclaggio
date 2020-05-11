@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { APPOINTMENTUSER } from '../../../../data/appointments'
+import { APPOINTMENTS } from '../../../../data/appointments'
 
 @Component({
   selector: 'app-user-layout',
@@ -8,7 +8,7 @@ import { APPOINTMENTUSER } from '../../../../data/appointments'
 })
 export class UserLayoutComponent implements OnInit {
 
-  appointments = APPOINTMENTUSER;
+  appointments = APPOINTMENTS;
 
   constructor() { }
 
