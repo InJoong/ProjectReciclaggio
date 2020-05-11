@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { APPOINTMENTS } from "../../../data/appointments";
+import { APPOINTMENTS } from '../../../data/appointments';
 
 @Component({
   selector: 'app-service-layout',
@@ -8,7 +8,7 @@ import { APPOINTMENTS } from "../../../data/appointments";
 })
 export class ServiceLayoutComponent implements OnInit {
 
-  appointments = APPOINTMENTS.filter(function (appointment) {
+  appointments = APPOINTMENTS.filter(appointment => {
     return appointment.driverId === null;
   } );
 
