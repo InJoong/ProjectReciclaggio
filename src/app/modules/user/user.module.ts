@@ -7,6 +7,7 @@ import { FirstStepComponent } from './components/first-step/first-step.component
 import { SecondStepComponent } from './components/second-step/second-step.component';
 import { ThridStepComponent } from './components/thrid-step/thrid-step.component';
 import { FouthStepComponent } from './components/fouth-step/fouth-step.component';
+import { UserLayoutComponent } from './components/user-layout/user-layout.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FouthStepComponent } from './components/fouth-step/fouth-step.component
     FirstStepComponent,
     SecondStepComponent,
     ThridStepComponent,
-    FouthStepComponent
+    FouthStepComponent,
+    UserLayoutComponent
   ],
   imports: [
     CommonModule,
