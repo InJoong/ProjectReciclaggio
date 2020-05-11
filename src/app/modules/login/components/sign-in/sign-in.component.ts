@@ -1,10 +1,9 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 import {
   trigger,
   state,
-  style,
-  animate,
-  transition
+  style
 } from '@angular/animations';
 
 @Component({
@@ -25,7 +24,7 @@ import {
 export class SignInComponent implements OnInit, AfterViewInit, OnDestroy {
   isSelected = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 
@@ -43,6 +42,16 @@ export class SignInComponent implements OnInit, AfterViewInit, OnDestroy {
 
   toggle(){
     this.isSelected = !this.isSelected;
+  }
+
+  loginUser() {
+    localStorage.setItem('userType', 'user');
+    this.router.navigateByUrl('/user');
+  }
+
+  loginDriver() {
+    localStorage.setItem('userType', 'driver');
+    this.router.navigateByUrl('/driver');
   }
 
 }

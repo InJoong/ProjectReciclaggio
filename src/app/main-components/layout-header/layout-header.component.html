@@ -1,7 +1,7 @@
 <nav class="navbar header navbar-expand-sm fixed-top">
   <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-      <span class="navbar-toggler-icon"><img src="assets/img//hamburger_icon.png" style="height: 100%" alt="hamburger"></span>
+      <span class="navbar-toggler-icon"><img src="assets/img/hamburger_icon.png" style="height: 100%" alt="hamburger"></span>
       <span class="reciclaggio">Reciclaggio</span>
     </button>
     <img src="assets/img/HarambeChidori.png" alt="Harambe" style="width: 50px;">
@@ -9,29 +9,29 @@
 
     <div class="collapse navbar-collapse" id="Navbar">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="./user_home.html">
+        <li class="nav-item" *ngIf="usertype==='user'">
+          <a class="nav-link" routerLink="user">
             Mis Citas
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active">
+        <li class="nav-item" *ngIf="usertype==='user'">
+          <a class="nav-link" routerLink="/user/nueva-orden/1">
             Hacer una cita
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="usertype==='driver'">
           <a class="nav-link" routerLink="driver">
-            Citas (Driver)
+            Citas
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="usertype==='driver'">
           <a class="nav-link" routerLink="driver/map">
-            Ruta del dia (Driver)
+            Ruta del dia
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="usertype==='driver'">
           <a class="nav-link" routerLink="driver/services">
-            Servicios Disponibles (Driver)
+            Servicios Disponibles
           </a>
         </li>
         <li class="nav-item">
@@ -40,7 +40,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <img src="assets/img//language_icon.png" height="25" alt="language"
+          <img src="assets/img/language_icon.png" height="25" alt="language"
                data-toggle="modal" data-target="#staticBackdrop" />
         </li>
 
