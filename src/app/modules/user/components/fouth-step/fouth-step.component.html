@@ -7,7 +7,7 @@
   </div>
   <div class="row" style="margin-top: 15px;">
     <div class="form-body">
-      <form action="./user_home.html" method="get">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
 
         <div class="stripe-api" i18n>
           Stripe API

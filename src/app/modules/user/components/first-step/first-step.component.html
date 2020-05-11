@@ -7,29 +7,23 @@
   </div>
   <div class="row" style="margin-top: 15px;">
     <div class="form-body">
-      <form action="./nueva_orden_2.html" method="get">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <div class="form-group">
           <label for="categoria" i18n>Categoria</label>
-          <select class="form-control" id="categoria" required>
-            <option label="categoria"></option>
-            <option i18n>Electronicos</option>
-            <option i18n>Muebles</option>
-            <option i18n>Papel</option>
+          <select class="form-control" id="categoria" required name="categoria" ngModel (ngModelChange)="changeCategory">
+            <option *ngFor="let category of categories" value="{{category.id}}">{{category.nombre}}</option>
           </select>
         </div>
         <div class="form-group">
           <label for="subcategoria" i18n>Subcategoria</label>
-          <select class="form-control" id="subcategoria" required>
-            <option label="subcategoria"></option>
-            <option i18n>Revistas</option>
-            <option i18n>Libros</option>
-            <option i18n>Periodicos</option>
+          <select class="form-control" id="subcategoria" required ngModel name="subcategoria">
+              <option *ngFor="let subcategory of subcategories"  value="{{subcategory.id}}">{{subcategory.nombre}}</option>
           </select>
         </div>
 
         <label for="peso" i18n>Peso</label>
         <div class="input-group">
-          <input type="text" class="form-control" id="peso" placeholder="1" pattern="[0-9]*[.]{0,1}[0-9]*">
+          <input ngModel name="peso" type="text" class="form-control" id="peso" placeholder="1" pattern="[0-9]*[.]{0,1}[0-9]*">
           <div class="input-group-append">
             <span class="input-group-text" id="basic-addon3">kg</span>
           </div>
@@ -39,7 +33,7 @@
 
         <label for="alto" i18n>Altura</label>
         <div class="input-group">
-          <input type="text" class="form-control" id="alto" placeholder="10" pattern="[0-9]*[.]{0,1}[0-9]*">
+          <input ngModel name="alto" type="text" class="form-control" id="alto" placeholder="10" pattern="[0-9]*[.]{0,1}[0-9]*">
           <div class="input-group-append">
             <span class="input-group-text">cm</span>
           </div>
@@ -48,7 +42,7 @@
         <label for="ancho" i18n>Anchura</label>
         <div class="input-group">
 
-          <input type="text" class="form-control" id="ancho" placeholder="10" pattern="[0-9]*[.]{0,1}[0-9]*">
+          <input ngModel name="ancho" type="text" class="form-control" id="ancho" placeholder="10" pattern="[0-9]*[.]{0,1}[0-9]*">
           <div class="input-group-append">
             <span class="input-group-text">cm</span>
           </div>
@@ -58,7 +52,7 @@
         <label for="alto" i18n>Longitud</label>
         <div class="input-group">
 
-          <input type="text" class="form-control" id="largo" placeholder="10" pattern="[0-9]*[.]{0,1}[0-9]*">
+          <input ngModel name="largo" type="text" class="form-control" id="largo" placeholder="10" pattern="[0-9]*[.]{0,1}[0-9]*">
           <div class="input-group-append">
             <span class="input-group-text">cm</span>
           </div>
