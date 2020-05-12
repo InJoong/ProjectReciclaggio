@@ -9,8 +9,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ServiceDetailComponent implements OnInit {
 
-  currentId = this.route.snapshot.params['id'];
-  appointment = APPOINTMENTS.filter(appointment => appointment.id == this.currentId)[0];
+  currentId = this.route.snapshot.params.id;
+  appointment = APPOINTMENTS.filter(appointment => appointment.id.toString() === this.currentId)[0];
 
   constructor(private route: ActivatedRoute) {}
 

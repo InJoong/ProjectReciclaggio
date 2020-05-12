@@ -7,7 +7,7 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 })
 export class LayoutHeaderComponent implements OnInit, DoCheck {
 
-  usertype = "";
+  usertype = '';
 
   constructor() {
   }
