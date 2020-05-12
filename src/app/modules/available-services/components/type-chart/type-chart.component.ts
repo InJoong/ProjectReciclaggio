@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ChartType, ChartOptions } from 'chart.js';
 import { SingleDataSet, Label, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
 
-import { APPOINTMENTS } from "../../../../data/appointments";
+import { APPOINTMENTS } from '../../../../data/appointments';
 
 @Component({
   selector: 'app-type-chart',
@@ -14,13 +14,13 @@ export class TypeChartComponent implements OnInit {
 
   appointments = APPOINTMENTS;
   mueblesCounter: number =
-    APPOINTMENTS.filter(appointment => appointment.type === "Muebles" && appointment.driverId == null).length;
+    APPOINTMENTS.filter(appointment => appointment.type === 'Muebles' && appointment.driverId == null).length;
   cascajoCounter: number =
-    APPOINTMENTS.filter(appointment => appointment.type === "Cascajo" && appointment.driverId == null).length;
+    APPOINTMENTS.filter(appointment => appointment.type === 'Cascajo' && appointment.driverId == null).length;
   electrodomesticosCounter: number =
-    APPOINTMENTS.filter(appointment => appointment.type === "Electrodomesticos" && appointment.driverId == null).length;
+    APPOINTMENTS.filter(appointment => appointment.type === 'Electrodomesticos' && appointment.driverId == null).length;
   otrosCounter: number =
-    APPOINTMENTS.filter(appointment => appointment.type === "Otros" && appointment.driverId == null).length;
+    APPOINTMENTS.filter(appointment => appointment.type === 'Otros' && appointment.driverId == null).length;
 
 
 
@@ -40,11 +40,19 @@ export class TypeChartComponent implements OnInit {
 
   ngOnInit() {
     this.appointments.forEach(appointment => {
-      if(appointment.type == "Muebles") this.mueblesCounter++;
-      else if(appointment.type == "Cascajo") this.cascajoCounter++;
-      else if(appointment.type == "Electrodomesticos") this.electrodomesticosCounter++;
-      else this.otrosCounter++;
-    })
+      if (appointment.type === 'Muebles') {
+        this.mueblesCounter++;
+      }
+      else if (appointment.type === 'Cascajo') {
+        this.cascajoCounter++;
+      }
+      else if (appointment.type === 'Electrodomesticos') {
+        this.electrodomesticosCounter++;
+      }
+      else {
+        this.otrosCounter++;
+      }
+    });
   }
 
 }

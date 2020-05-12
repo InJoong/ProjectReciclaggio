@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {APPOINTMENTS} from "../../../../data/appointments";
-import {ActivatedRoute} from "@angular/router";
+import {APPOINTMENTS} from '../../../../data/appointments';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-service-detail',
