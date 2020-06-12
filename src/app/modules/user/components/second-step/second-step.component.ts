@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Directive, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Router} from '@angular/router';
+import {} from 'googlemaps';
+import { ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-second-step',
@@ -8,10 +10,25 @@ import {Router} from '@angular/router';
   styleUrls: ['./second-step.component.scss']
 })
 export class SecondStepComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  map: any;
+  geocoder: any;
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
+    this.geocoder = new google.maps.Geocoder();
+    this.geocoder.geocode({
+      address: 'Tecnologico de Monterrey CCM'
+      // tslint:disable-next-line:no-unused-expression
+    }), function(results, status): void {
+      if (status === google.maps.GeocoderStatus.OK) {
+        const myOptions = {
+          zoom: 8,
+          center: results[0].geometry.location,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        this.map = new google.maps.Map(document.getElementById('map'), myOptions);
+      }
+    };
   }
 
   onSubmit(f: NgForm) {
@@ -33,4 +50,12 @@ export class SecondStepComponent implements OnInit {
     this.router.navigateByUrl('/user/nueva-orden/3');
   }
 
+}
+
+function initMap() {
+  let map;
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8
+  });
 }
