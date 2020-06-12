@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { APPOINTMENTS } from '../../../../data/appointments';
+import {OrdersService} from "../../services/orders.service";
 
 @Component({
   selector: 'app-driver-layout',
@@ -8,11 +8,19 @@ import { APPOINTMENTS } from '../../../../data/appointments';
 })
 export class DriverLayoutComponent implements OnInit {
 
-  appointments = APPOINTMENTS;
+  orders;
 
-  constructor() { }
+  constructor(public ordersService: OrdersService) { }
 
   ngOnInit(): void {
+    this.getOrders();
+  }
+
+  getOrders(): void {
+    this.ordersService.getOrders().subscribe((data: {}) => {
+      this.orders = data;
+      console.log("Respuesta => : " + this.orders)
+    });
   }
 
 }

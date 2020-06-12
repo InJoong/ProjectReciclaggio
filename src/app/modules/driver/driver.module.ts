@@ -5,12 +5,14 @@ import { DriverRoutingModule } from './driver-routing.module';
 import { RouteMapComponent } from './components/route-map/route-map.component';
 import { DriverLayoutComponent } from './components/driver-layout/driver-layout.component';
 
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [DriverCardComponent, RouteMapComponent, DriverLayoutComponent],
   imports: [
     CommonModule,
-    DriverRoutingModule
+    DriverRoutingModule,
+    HttpClientModule
   ]
 })
 export class DriverModule { }

@@ -3,8 +3,9 @@
     <h1 class="center-element" i18n>Citas</h1>
   </div>
   <div class="row align-items-center center-row row2-padding" >
-    <div class="col-sm-12 col-md-4" *ngFor="let appointment of appointments" >
-      <app-driver-card *ngIf="appointment.driverId==696969" [appointment]="appointment"></app-driver-card>
+    <div class="col-sm-12 col-md-4" *ngFor="let order of orders" >
+      <app-driver-card [appointment]="order"></app-driver-card>
+      <!-- *ngIf="order.driver_id==696969" -->
     </div>
     <div class="col-sm-1"></div>
   </div>
