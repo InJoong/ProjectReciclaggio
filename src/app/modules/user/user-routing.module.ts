@@ -5,13 +5,14 @@ import { SecondStepComponent } from './components/second-step/second-step.compon
 import { ThridStepComponent } from './components/thrid-step/thrid-step.component';
 import { FouthStepComponent } from './components/fouth-step/fouth-step.component';
 import { UserLayoutComponent } from './components/user-layout/user-layout.component';
+import { AuthGuard } from 'src/app/guards/auth.guard';
 
 const rutas: Routes = [
-  {path: '', component: UserLayoutComponent},
-  {path: 'nueva-orden/1', component: FirstStepComponent},
-  {path: 'nueva-orden/2', component: SecondStepComponent},
-  {path: 'nueva-orden/3', component: ThridStepComponent},
-  {path: 'nueva-orden/4', component: FouthStepComponent}
+  {path: '', component: UserLayoutComponent, canActivate: [AuthGuard]},
+  {path: 'nueva-orden/1', component: FirstStepComponent, canActivate: [AuthGuard]},
+  {path: 'nueva-orden/2', component: SecondStepComponent, canActivate: [AuthGuard]},
+  {path: 'nueva-orden/3', component: ThridStepComponent, canActivate: [AuthGuard]},
+  {path: 'nueva-orden/4', component: FouthStepComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
