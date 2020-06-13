@@ -2,7 +2,6 @@ import {Component, Directive, OnInit} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Router} from '@angular/router';
 import {} from 'googlemaps';
-import { ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-second-step',
