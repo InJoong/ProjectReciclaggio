@@ -5,6 +5,8 @@ import {
   state,
   style
 } from '@angular/animations';
+import { AuthService } from 'src/app/services/auth.service';
+import { AuthDriverService } from 'src/app/services/auth-driver.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -24,10 +26,10 @@ import {
 export class SignInComponent implements OnInit, AfterViewInit, OnDestroy {
   isSelected = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public auth: AuthService, public authdriver: AuthDriverService) { }
 
   ngOnInit(): void {
-
+    
   }
 
   ngAfterViewInit(): void {
