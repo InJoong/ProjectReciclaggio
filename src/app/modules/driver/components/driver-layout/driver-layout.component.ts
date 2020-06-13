@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {OrdersService} from "../../services/orders.service";
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-driver-layout',
@@ -10,17 +11,16 @@ export class DriverLayoutComponent implements OnInit {
 
   orders;
 
-  constructor(public ordersService: OrdersService) { }
+  constructor(public ordersService: OrdersService, private api: ApiService) { }
 
   ngOnInit(): void {
     this.getOrders();
   }
 
-  getOrders(): void {
-    this.ordersService.getOrders().subscribe((data: {}) => {
-      this.orders = data;
-      console.log("Respuesta => : " + this.orders)
-    });
+  getOrders() {
+    this.api.ping$().subscribe(
+      res => this.orders = res
+    );
   }
 
 }
