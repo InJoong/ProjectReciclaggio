@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartType, ChartOptions } from 'chart.js';
+import { ApiService } from 'src/app/services/api.service';
 import { SingleDataSet, Label, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
-
-import { APPOINTMENTS } from '../../../../data/appointments';
 
 @Component({
   selector: 'app-type-chart',
@@ -12,17 +11,11 @@ import { APPOINTMENTS } from '../../../../data/appointments';
 
 export class TypeChartComponent implements OnInit {
 
-  appointments = APPOINTMENTS;
-  mueblesCounter: number =
-    APPOINTMENTS.filter(appointment => appointment.type === 'Muebles' && appointment.driverId == null).length;
-  cascajoCounter: number =
-    APPOINTMENTS.filter(appointment => appointment.type === 'Cascajo' && appointment.driverId == null).length;
-  electrodomesticosCounter: number =
-    APPOINTMENTS.filter(appointment => appointment.type === 'Electrodomesticos' && appointment.driverId == null).length;
-  otrosCounter: number =
-    APPOINTMENTS.filter(appointment => appointment.type === 'Otros' && appointment.driverId == null).length;
-
-
+  orders;
+  mueblesCounter: number = 5;
+  cascajoCounter: number = 2;
+  electrodomesticosCounter: number = 4;
+  otrosCounter: number = 22;
 
   public pieChartOptions: ChartOptions = {
     responsive: true,
@@ -33,20 +26,34 @@ export class TypeChartComponent implements OnInit {
   public pieChartLegend = true;
   public pieChartPlugins = [];
 
-  constructor() {
+  constructor(private api: ApiService) {
     monkeyPatchChartJsTooltip();
     monkeyPatchChartJsLegend();
   }
 
   ngOnInit() {
-    this.appointments.forEach(appointment => {
-      if (appointment.type === 'Muebles') {
+    this.getOrders()
+  }
+
+  ngOnChange() {
+    this.increaseCounters()
+  }
+
+  getOrders() {
+    this.api.getOrders$("/driver/" + "null").subscribe(
+      res => this.orders = res
+    );
+  }
+
+  increaseCounters() {
+    this.orders.forEach(appointment => {
+      if (appointment.categoria === 'Muebles') {
         this.mueblesCounter++;
       }
-      else if (appointment.type === 'Cascajo') {
+      else if (appointment.categoria === 'Cascajo') {
         this.cascajoCounter++;
       }
-      else if (appointment.type === 'Electrodomesticos') {
+      else if (appointment.categoria === 'Electrodomesticos') {
         this.electrodomesticosCounter++;
       }
       else {

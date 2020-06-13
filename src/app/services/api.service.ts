@@ -13,6 +13,18 @@ export class ApiService {
     return this.http.get('http://localhost:5000/api/es/orders' + param);
   }
 
+  getOrderById$(order_id): Observable<any> {
+    return this.http.get('http://localhost:5000/api/es/order/' + order_id);
+  }
+
+  putOrders$(order_id, driver_id): Observable<any> {
+    console.log("hhh")
+    return this.http.put('http://localhost:5000/api/es/orders', {
+      id: order_id,
+      driver_id: driver_id
+    });
+  }
+
   postOrder$(category: string,
              subcategory: string,
              alto: string,
