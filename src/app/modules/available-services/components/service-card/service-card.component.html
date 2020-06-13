@@ -1,11 +1,11 @@
   <div class="card">
     <div class="card-header">
-      <a [routerLink]="['detail', appointment.id]" class="btn" i18n>Detalles</a>
-      <span> Tipo de servicio: <b> {{appointment.type}} </b></span>
+      <a [routerLink]="['detail', appointment._id]" class="btn" i18n>Detalles</a>
+      <span> Tipo de servicio: <b> {{appointment.categoria}} </b></span>
     </div>
     <div class="card-body">
-      <h5 class="card-title">{{appointment.client}}</h5>
-      <p class="card-text">{{appointment.zone}}, {{appointment.address}}</p>
-      <p class="card-text">{{appointment.date}}, {{appointment.hour}}</p>
+      <h5 class="card-title">{{appointment.client_id}}</h5>
+      <p class="card-text">{{appointment.address}}</p>
+      <p class="card-text">{{appointment.date.toString()  }}</p>
     </div>
   </div>
