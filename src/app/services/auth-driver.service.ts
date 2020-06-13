@@ -116,7 +116,6 @@ export class AuthDriverService {
 
   logout() {
     // Ensure Auth0 client instance exists
-    console.log("HOla");
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log out
       client.logout({
