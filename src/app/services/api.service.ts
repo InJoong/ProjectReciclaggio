@@ -11,11 +11,11 @@ export class ApiService {
 
   getOrders$(param: string = "/"): Observable<any> {
     console.log(this.locale);
-    return this.http.get('http://localhost:5000/api/es/orders'+param);
+    return this.http.get(`http://localhost:5000/api/${this.locale}/orders${param}`);
   }
 
   createUser$(user): Observable<any> {
-    return this.http.post('http://localhost:5000/api/es/users', user);
+    return this.http.post(`http://localhost:5000/api/${this.locale}/users`, user);
   }
 
 }
