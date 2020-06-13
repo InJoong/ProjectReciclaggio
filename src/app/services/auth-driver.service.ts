@@ -16,6 +16,7 @@ export class AuthDriverService {
       domain: 'dev-3ig-2tho.us.auth0.com',
       client_id: 'lID7zr6Iut2h5YDkhgQMUrV0BReT6MR0',
       redirect_uri: '${window.location.origin}',
+      audience: 'http://reciclaggiojwt.com/api'
     })
   ) as Observable<Auth0Client>).pipe(shareReplay(1), catchError(err=> throwError(err)));
 
