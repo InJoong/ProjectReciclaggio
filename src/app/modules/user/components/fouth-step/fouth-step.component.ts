@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Router} from '@angular/router';
+import {ApiService} from '../../../../services/api.service';
+import {AuthService} from '../../../../services/auth.service';
 
 @Component({
   selector: 'app-fouth-step',
@@ -15,10 +17,10 @@ export class FouthStepComponent implements OnInit {
   ancho = '';
   largo = '';
   ubicacion = '';
-  dias = '';
+  dias = [];
   comentarios = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private api: ApiService, private auth: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -31,9 +33,15 @@ export class FouthStepComponent implements OnInit {
     this.ancho = localStorage.getItem('anchoForm');
     this.largo = localStorage.getItem('largoForm');
     this.ubicacion = localStorage.getItem('ubicacionForm');
-    this.dias = JSON.parse(localStorage.getItem('diasForm'));
+    this.dias = (localStorage.getItem('diasForm')).split(',');
     this.comentarios = localStorage.getItem('comentariosExtraForm');
 
+
+    const userId = this.auth.userProfile$.source['value'].sub;
+    this.api.postOrder$(this.categoria, this.subcategoria, this.alto, this.peso, this.ancho, this.largo,
+      this.ubicacion, this.dias, this.comentarios, userId).subscribe(
+      res => console.log(res)
+    );
 
 
     this.router.navigateByUrl('/user');
