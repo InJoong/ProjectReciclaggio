@@ -10,17 +10,16 @@ export class ApiService {
   constructor(@Inject(LOCALE_ID) public locale: string,private http: HttpClient) { }
 
   getOrders$(param: string = "/"): Observable<any> {
-    console.log(this.locale);
     return this.http.get(`http://localhost:5000/api/${this.locale}/orders${param}`);
   }
 
   getOrderById$(order_id): Observable<any> {
-    return this.http.get('http://localhost:5000/api/es/order/' + order_id);
+    return this.http.get(`http://localhost:5000/api/${this.locale}/order/${order_id}`);
   }
 
   putOrders$(order_id, driver_id): Observable<any> {
     console.log("hhh")
-    return this.http.put('http://localhost:5000/api/es/orders', {
+    return this.http.put(`http://localhost:5000/api/${this.locale}/orders`, {
       id: order_id,
       driver_id: driver_id
     });
@@ -37,7 +36,7 @@ export class ApiService {
              comentarios: string,
              clientId: string): Observable<any> {
 
-    return this.http.post('http://localhost:5000/api/es/orders', {
+    return this.http.post(`http://localhost:5000/api/${this.locale}/orders`, {
       client_id: clientId,
       address: ubicacion,
       comentarios,
@@ -52,11 +51,8 @@ export class ApiService {
   }
 
   getCategories$(): Observable<any> {
-    return this.http.get('http://localhost:5000/api/es/categories');
+    return this.http.get(`http://localhost:5000/api/${this.locale}/categories`);
   }
-
-}
-
 
   createUser$(user): Observable<any> {
     return this.http.post(`http://localhost:5000/api/${this.locale}/users`, user);
