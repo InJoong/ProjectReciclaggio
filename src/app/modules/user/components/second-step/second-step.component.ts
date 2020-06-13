@@ -12,23 +12,42 @@ import { ViewChild } from '@angular/core';
 export class SecondStepComponent implements OnInit {
   map: any;
   geocoder: any;
+  public address = 'Tecnologico de Monterrey CCM';
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
+  changeAddress(newAddress) {
+    this.address = newAddress;
+    this.updateMap();
+  }
+
+  updateMap() {
+    // This piece of code is disabled due to API billing problems
+
     this.geocoder = new google.maps.Geocoder();
     this.geocoder.geocode({
-      address: 'Tecnologico de Monterrey CCM'
+      address: this.address
       // tslint:disable-next-line:no-unused-expression
-    }), function(results, status): void {
+    }, function(results, status): void {
       if (status === google.maps.GeocoderStatus.OK) {
         const myOptions = {
-          zoom: 8,
+          zoom: 14,
           center: results[0].geometry.location,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         this.map = new google.maps.Map(document.getElementById('map'), myOptions);
       }
-    };
+    });
+/*
+    this.map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: {lat: 19.2839754, lng: -99.1378521},
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+*/
+  }
+
+  ngOnInit(): void {
+    this.updateMap();
   }
 
   onSubmit(f: NgForm) {

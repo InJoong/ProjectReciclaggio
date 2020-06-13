@@ -13,7 +13,7 @@
           <label for="ubicacion" i18n>Direccion</label>
           <textarea ngModel name="ubicacion"  class="form-control" id="ubicacion"
                      placeholder="Calle del Puente #222 Col. Ejidos de Huipulco, Tlalpan C.P. 14380, México D.F." required
-          >Calle del Puente #222 Col. Ejidos de Huipulco, Tlalpan C.P. 14380, México D.F.
+                    (ngModelChange)="changeAddress($event)">Calle del Puente #222 Col. Ejidos de Huipulco, Tlalpan C.P. 14380, México D.F.
                             </textarea>
         </div>
         <div id="map"></div>
