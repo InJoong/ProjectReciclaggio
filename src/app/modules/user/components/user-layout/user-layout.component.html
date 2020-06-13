@@ -4,9 +4,9 @@
     </div>
 
     <div class="row align-items-center center-row row2-padding">
-      <div *ngFor="let appointment of appointments" >
-        <div class="col-sm-12 col-md-4" *ngIf="appointment.driverId==null">
-          <app-user-card [appointment]="appointment"></app-user-card>
+      <div *ngFor="let order of orders" >
+        <div class="col-sm-12 col-md-4">
+          <app-user-card [appointment]="order"></app-user-card>
         </div>
       </div>
     </div>

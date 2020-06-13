@@ -9,8 +9,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  ping$(): Observable<any> {
-    return this.http.get('http://localhost:5000/api/es/orders');
+  getOrders$(param: string = "/"): Observable<any> {
+    return this.http.get('http://localhost:5000/api/es/orders'+param);
   }
 
 }
