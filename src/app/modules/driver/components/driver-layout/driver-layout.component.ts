@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
-import { AuthDriverService } from 'src/app/services/auth-driver.service';
+import {AuthDriverService} from "../../../../services/auth-driver.service";
 
 @Component({
   selector: 'app-driver-layout',
@@ -11,16 +11,23 @@ export class DriverLayoutComponent implements OnInit {
 
   orders;
 
-  constructor(private api: ApiService, private authdriver: AuthDriverService) { }
+  constructor(private api: ApiService, private auth: AuthDriverService) { }
 
   ngOnInit(): void {
+    this.getOrders();
+    console.log(this.auth.userProfile$);
+  }
+
+  ngOnChanges(): void {
     this.getOrders();
   }
 
   getOrders() {
-    this.api.getOrders$("/driver/"+this.authdriver.userProfile$.source['_value'].sub).subscribe(
+    let driver_id = this.auth.userProfile$.source['_value'].sub;
+    this.api.getOrders$("/driver/" + driver_id).subscribe(
       res => this.orders = res
     );
+
   }
 
 }

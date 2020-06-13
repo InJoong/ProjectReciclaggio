@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { APPOINTMENTS } from '../../../data/appointments';
+import { ApiService } from 'src/app/services/api.service';
+import {AuthDriverService} from "../../../services/auth-driver.service";
 
 @Component({
   selector: 'app-service-layout',
@@ -8,13 +9,18 @@ import { APPOINTMENTS } from '../../../data/appointments';
 })
 export class ServiceLayoutComponent implements OnInit {
 
-  appointments = APPOINTMENTS.filter(appointment => {
-    return appointment.driverId === null;
-  } );
+  orders;
 
-  constructor() { }
+  constructor(private api: ApiService, private auth: AuthDriverService) { }
 
   ngOnInit(): void {
+    this.getOrders();
+  }
+
+  getOrders() {
+    this.api.getOrders$("/driver/" + "null").subscribe(
+      res => this.orders = res
+    );
   }
 
 }

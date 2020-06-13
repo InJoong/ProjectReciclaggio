@@ -10,14 +10,14 @@
       <form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <div class="form-group">
           <label for="categoria" i18n>Categoria</label>
-          <select class="form-control" id="categoria" required name="categoria" ngModel (ngModelChange)="changeCategory">
-            <option *ngFor="let category of categories" value="{{category.id}}">{{category.nombre}}</option>
+          <select class="form-control" id="categoria" required name="categoria" ngModel (ngModelChange)="changeCategory($event)">
+            <option *ngFor="let category of categories" value="{{category}}">{{category}}</option>
           </select>
         </div>
         <div class="form-group">
           <label for="subcategoria" i18n>Subcategoria</label>
           <select class="form-control" id="subcategoria" required ngModel name="subcategoria">
-              <option *ngFor="let subcategory of subcategories"  value="{{subcategory.id}}">{{subcategory.nombre}}</option>
+              <option *ngFor="let subcategory of subcategories"  value="{{subcategory}}">{{subcategory}}</option>
           </select>
         </div>
 
