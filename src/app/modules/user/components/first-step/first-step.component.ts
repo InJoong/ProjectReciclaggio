@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CATEGORIES} from '../../../../data/categories';
-import {SUBCATEGORIES} from '../../../../data/subcategories';
 import {NgForm} from '@angular/forms';
 import {Router} from '@angular/router';
+import {ApiService} from '../../../../services/api.service';
 
 @Component({
   selector: 'app-first-step',
@@ -10,17 +9,33 @@ import {Router} from '@angular/router';
   styleUrls: ['./first-step.component.scss']
 })
 export class FirstStepComponent implements OnInit {
-  categories = CATEGORIES;
-  subcategories = SUBCATEGORIES;
+  public categories = [];
+  public subcategories = [];
+  public subcategoriesTotal = [];
 
-  selectedCategory = 1;
-  constructor(private router: Router) { }
+  selectedCategory = 0;
+  constructor(private router: Router,  private api: ApiService) { }
 
   changeCategory(newValue) {
-    this.selectedCategory = newValue;
+    this.categories.forEach((category, index) => {
+      if (newValue === category) {
+        this.selectedCategory = index;
+      }
+    });
+    this.subcategories = this.subcategoriesTotal[this.selectedCategory];
   }
 
   ngOnInit(): void {
+
+    this.api.getCategories$().subscribe(
+      (res) => {
+        console.log(res);
+        res.forEach((category, index) => {
+          this.categories.push(category.name);
+          this.subcategoriesTotal.push(category.subcategories);
+        });
+      }
+    );
   }
 
   onSubmit(f: NgForm) {
