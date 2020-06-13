@@ -7,19 +7,12 @@
     </div>
     <div class="row align-items-center center-row row2-padding">
         <form class="center-element">
-            <div class="form-group">
-              <label for="exampleInputEmail1" i18n>Correo Electronico</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" (click)="toggle()" [@textFieldSelected]="isSelected ? 'onSelect' : 'offSelect'">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1" i18n>Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" (click)="toggle()" [@textFieldSelected]="isSelected ? 'onSelect' : 'offSelect'">
-            </div>
-            <div class="form-group form-check">
-            </div>
-
-            <a class="btn btn-primary" (click)="loginUser()" i18n>Login de Usuario</a>
-            <a class="btn btn-primary" (click)="loginDriver()" i18n>Login de Conductor</a>
-          </form>
+            <a class="btn btn-primary" (click)="auth.login('/user')" *ngIf="!auth.loggedIn && !authdriver.loggedIn" i18n>Login User</a>
+            <a class="btn btn-primary" (click)="authdriver.login('/driver')" *ngIf="!auth.loggedIn && !authdriver.loggedIn" i18n>Login Driver</a>
+            <a class="btn btn-primary" routerLink="/user" *ngIf="auth.loggedIn" i18n>Go to Interface</a>
+            <a class="btn btn-primary" routerLink="/driver" *ngIf="authdriver.loggedIn" i18n>Go to Interface</a>
+            <br/>
+            <a class="btn btn-primary" (click)="auth.logout()" *ngIf="auth.loggedIn || authdriver.loggedIn" i18n>Logout</a>
+        </form>
     </div>
 </div>

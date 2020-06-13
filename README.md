@@ -1,5 +1,7 @@
 # Reciclaggio
 
+[**Video Muestra**](https://drive.google.com/open?id=1bhYOOLicVWeDdvg7Q9DSSV4EGrYrMPm6)
+
 ![Logo de Reciclaggio](./src/assets/img/HarambeChidori.png)
 
 Plataforma diseñada para permitir que usuarios que deseen reciclar diferentes tipos de
