@@ -15,11 +15,11 @@ export class UserLayoutComponent implements OnInit {
   constructor(private api: ApiService, private auth: AuthService) { }
 
   ngOnInit(): void {
-    console.log(this.auth.userProfile$.source['_value'].sub);
+    this.getOrders();
   }
 
   getOrders() {
-    this.api.getOrders$("/client/:").subscribe(
+    this.api.getOrders$("/client/"+this.auth.userProfile$.source['_value'].sub).subscribe(
       res => this.orders = res
     );
   }
