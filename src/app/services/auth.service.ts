@@ -3,7 +3,7 @@ import createAuth0Client from '@auth0/auth0-spa-js';
 import Auth0Client from '@auth0/auth0-spa-js/dist/typings/Auth0Client';
 
 import { from, of, Observable, BehaviorSubject, combineLatest, throwError } from 'rxjs';
-import { tap, catchError, concatMap, shareReplay } from 'rxjs/operators';
+import { tap, catchError, concatMap, shareReplay, delay } from 'rxjs/operators';
 
 import { Router } from '@angular/router';
 
@@ -116,7 +116,6 @@ export class AuthService {
 
   logout() {
     // Ensure Auth0 client instance exists
-    console.log("HOla");
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log out
       client.logout({
