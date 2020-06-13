@@ -9,33 +9,38 @@
 
     <div class="collapse navbar-collapse" id="Navbar">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item" *ngIf="usertype==='user'">
+        <li class="nav-item" *ngIf="auth.loggedIn">
           <a class="nav-link" routerLink="user">
             Mis Citas
           </a>
         </li>
-        <li class="nav-item" *ngIf="usertype==='user'">
+        <li class="nav-item" *ngIf="auth.loggedIn">
           <a class="nav-link" routerLink="/user/nueva-orden/1">
             Hacer una cita
           </a>
         </li>
-        <li class="nav-item" *ngIf="usertype==='driver'">
+        <li class="nav-item" *ngIf="authdriver.loggedIn">
           <a class="nav-link" routerLink="driver">
             Citas
           </a>
         </li>
-        <li class="nav-item" *ngIf="usertype==='driver'">
+        <li class="nav-item" *ngIf="authdriver.loggedIn">
           <a class="nav-link" routerLink="driver/map">
             Ruta del dia
           </a>
         </li>
-        <li class="nav-item" *ngIf="usertype==='driver'">
+        <li class="nav-item" *ngIf="authdriver.loggedIn">
           <a class="nav-link" routerLink="driver/services">
             Servicios Disponibles
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink=".">
+        <li class="nav-item" *ngIf="auth.loggedIn">
+          <a class="nav-link" (click)="auth.logout()">
+            Logout
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="authdriver.loggedIn">
+          <a class="nav-link" (click)="authdriver.logout()">
             Logout
           </a>
         </li>
