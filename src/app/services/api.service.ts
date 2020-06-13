@@ -9,8 +9,9 @@ export class ApiService {
 
   constructor(@Inject(LOCALE_ID) public locale: string,private http: HttpClient) { }
 
-  getOrders$(param: string = '/'): Observable<any> {
-    return this.http.get('http://localhost:5000/api/es/orders' + param);
+  getOrders$(param: string = "/"): Observable<any> {
+    console.log(this.locale);
+    return this.http.get(`http://localhost:5000/api/${this.locale}/orders${param}`);
   }
 
   getOrderById$(order_id): Observable<any> {
@@ -58,7 +59,7 @@ export class ApiService {
 
 
   createUser$(user): Observable<any> {
-    return this.http.post('http://localhost:5000/api/es/users', user);
+    return this.http.post(`http://localhost:5000/api/${this.locale}/users`, user);
   }
 
 }
