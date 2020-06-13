@@ -32,7 +32,7 @@ export class AuthDriverService {
   loggedIn: boolean = null;
 
   private userProfileSubject$ = new BehaviorSubject<any>(null);
-  userProfile$ = this.userProfileSubject$.asObservable();
+  public userProfile$ = this.userProfileSubject$.asObservable();
 
   constructor(private router: Router) { 
     this.localAuthSetup();
