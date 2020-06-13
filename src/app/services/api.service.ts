@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  constructor(@Inject(LOCALE_ID) public locale: string,private http: HttpClient) { }
+  constructor(@Inject(LOCALE_ID) public locale: string, private http: HttpClient) { }
 
   getOrders$(param: string = "/"): Observable<any> {
     return this.http.get(`http://localhost:5000/api/${this.locale}/orders${param}`);
